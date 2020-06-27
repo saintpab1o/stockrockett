@@ -31,7 +31,12 @@ axios.get('https://cloud.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePerc
     let thursdayCount = 0
     let fridayCount = 0
 
-    let mondayMonthlyTotal = 0
+    let mondayMonthlyPercent = 0
+    let tuesdayMonthlyPercent = 0
+    let wednesdayMonthlyPercent = 0
+    let thursdayMonthlyPercent = 0
+    let fridayMonthlyPercent = 0
+   
 
     let sqData = response.data
       
@@ -42,30 +47,37 @@ axios.get('https://cloud.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePerc
         if(monday.includes(el.date)){
             mondayCount += 1
             mondayChange += dailyChange
-            const mondayMonthlyPercent = (mondayChange / mondayCount) 
-            // console.log(mondayMonthlyPercent)
+            mondayMonthlyPercent = (mondayChange / mondayCount) 
+            
+            
         } else if(tuesday.includes(el.date)){
             tuesdayCount += 1
             tuesdayChange += dailyChange
-            const tuesdayMonthlyPercent = (tuesdayChange / tuesdayCount)  
-            // console.log(tuesdayMonthlyPercent)  
+            tuesdayMonthlyPercent = (tuesdayChange / tuesdayCount)  
+             
         } else if(wednesday.includes(el.date)){
             wednesdayCount += 1
             wednesdayChange += dailyChange
-            const wednesdayMonthlyPercent = (wednesdayChange / wednesdayCount)  
-            // console.log(wednesdayMonthlyPercent)  
+            wednesdayMonthlyPercent = (wednesdayChange / wednesdayCount)  
+             
         } else if(thursday.includes(el.date)){
             thursdayCount += 1
             thursdayChange += dailyChange
-            const thursdayMonthlyPercent = (thursdayChange / thursdayCount)  
-            // console.log(thursdayMonthlyPercent)  
+            thursdayMonthlyPercent = (thursdayChange / thursdayCount)  
+             
         } else if(friday.includes(el.date)){
             fridayCount += 1
             fridayChange += dailyChange
-            const fridayMonthlyPercent = (fridayChange / fridayCount)
-            
+            fridayMonthlyPercent = (fridayChange / fridayCount)
+                     
         }
+        
     })
+        console.log(mondayMonthlyPercent)
+        console.log(tuesdayMonthlyPercent) 
+        console.log(wednesdayMonthlyPercent) 
+        console.log(thursdayMonthlyPercent) 
+        console.log(fridayMonthlyPercent)  
 })
 
 
