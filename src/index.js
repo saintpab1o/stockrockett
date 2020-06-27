@@ -1,6 +1,7 @@
 import { IEXCloudClient } from "node-iex-cloud";
 import axios from 'axios'
 
+
 const iex = new IEXCloudClient(fetch, {
     sandbox: true,
     publishable: "pk_16c53f86dc16458ea7482e9a864f0a99",
@@ -70,9 +71,7 @@ const iex = new IEXCloudClient(fetch, {
             fridayCount += 1
             fridayChange += dailyChange
             fridayMonthlyPercent = (fridayChange / fridayCount)
-                     
         }
-        
     })
         console.log('')
         console.log(mondayMonthlyPercent, 'sq monday')
@@ -312,7 +311,6 @@ const iex = new IEXCloudClient(fetch, {
             console.log(fridayMonthlyPercent, 'amzn friday')  
         })
 // }
-
 
 
 
