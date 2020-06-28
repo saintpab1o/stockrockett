@@ -1,15 +1,17 @@
 import { IEXCloudClient } from "node-iex-cloud";
 import axios from 'axios'
 
+ import * as d3 from 'd3'
+
 
 const iex = new IEXCloudClient(fetch, {
     sandbox: true,
-    publishable: "Tpk_16c53f86dc16458ea7482e9a864f0a99",
+    publishable: "Tpk_7191aab3200940d588ebad397e1e7e0d",
     version: "stable"
 });
 
 
-// export const getSqThirtyDayAvg = () => { 
+//  export const getSqThirtyDayAvg = () => { 
 axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePercent,date&token=Tpk_7191aab3200940d588ebad397e1e7e0d')
     .then(function (response) {
 
@@ -73,14 +75,42 @@ axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePe
             fridayMonthlyPercent = (fridayChange / fridayCount)
         }
     })
-        console.log('')
-        console.log(mondayMonthlyPercent, 'sq monday')
-        console.log(tuesdayMonthlyPercent, 'sq tuesday') 
-        console.log(wednesdayMonthlyPercent, 'sq wednesday') 
-        console.log(thursdayMonthlyPercent, 'sq thursday') 
-        console.log(fridayMonthlyPercent, 'sq friday')  
+
+    
+        // console.log(sqArray)
+        // console.log(mondayMonthlyPercent, 'sq monday')
+        // console.log(tuesdayMonthlyPercent, 'sq tuesday') 
+        // console.log(wednesdayMonthlyPercent, 'sq wednesday') 
+        // console.log(thursdayMonthlyPercent, 'sq thursday') 
+        // console.log(fridayMonthlyPercent, 'sq friday')  
+
+        // let sqArray = [mondayMonthlyPercent, tuesdayMonthlyPercent, wednesdayMonthlyPercent, thursdayMonthlyPercent, fridayMonthlyPercent]
+        let sqArray = [50, 20, 5, 30, 10]
+
+        var svgWidth = 500, svgHeight = 350, barPadding = 10;
+        var barWidth = (svgWidth / sqArray.length - 5 );
+
+
+        var svg = d3.select('svg')
+            .attr("width", svgWidth)
+            .attr("height", svgHeight);
+
+        var barChart = svg.selectAll("rect")
+            .data(sqArray)
+            .enter()
+            .append("rect")
+            .attr("y", function (d) {
+                return svgHeight - d * 2
+            })
+            .attr("height", function (d) {
+                return d * 2
+            })
+            .attr("width", barWidth - barPadding)
+            .attr("transform", function (d, i) {
+                var translate = [barWidth * i, 0];
+                return "translate(" + translate + ")";
     })
-// }
+});
 
 
 // // export const getAaplThirtyDayAvg = () => {
