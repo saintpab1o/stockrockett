@@ -367,11 +367,12 @@ export const getTslaThirtyDayAvg = () => {
                 .range(0, chartWidth);
 
             var xAxis = d3.axisBottom();
-
+            
 
         })
 
 }
+
 
 
 
