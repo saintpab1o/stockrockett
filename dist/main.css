@@ -32,6 +32,12 @@ nav { margin: 0; padding: 0;} body { margin: 0; padding: 0; }
   color: white;
 }
 
+.bar-chart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* 
 #stock-options{

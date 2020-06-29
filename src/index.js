@@ -91,9 +91,9 @@ axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePe
         // var data = [100, -100, -150, 55, 150, 120, 450, 980, 1200];
 
         var leftMargin = 50;  // Space to the left of first bar; accomodates y-axis labels
-        var rightMargin = 10; // Space to the right of last bar
+        var rightMargin = 0; // Space to the right of last bar
         var margin = { left: leftMargin, right: rightMargin, top: 10, bottom: 10 };
-        var barWidth = 30;  // Width of the bars
+        var barWidth = 50;  // Width of the bars
         var chartHeight = 450;  // Height of chart, from x-axis (ie. y=0)
         var chartWidth = margin.left + data.length * barWidth + margin.right;
 
@@ -122,7 +122,7 @@ axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePe
             .enter()
             .append("rect")
             .attr("x", function (d, i) { return margin.left + i * barWidth; })
-            .attr("y", function (d, i) { return chartHeight - Math.max(0, yScale(d)); })
+            .attr("y", function (d, i) { return chartHeight + 50 - Math.max(0, yScale(d)); })
             .attr("height", function (d) { return Math.abs(yScale(d)); })
             .attr("width", barWidth)
             .style("fill", "grey")
@@ -138,13 +138,22 @@ axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePe
             })
             .call(yAxis);
 
-    /*
+    
     var xScale = d3.scaleLinear()
                     .domain(0, data.length * barWidth)
                     .range(0, chartWidth);
 
-    var xAxis = d3.axisBottom();
-    */
+       
+
+    var xAxis = d3.axisBottom(xAxis);
+      svg.append('g')
+            .attr('transform', function (d) {
+                return 'translate(' + margin.left + ', 0)';
+            })
+            .call(yAxis);
+
+
+    
 
         // var svgWidth = 500, svgHeight = 350, barPadding = 10;
         // var barWidth = (svgWidth / sqArray.length - 5 );
