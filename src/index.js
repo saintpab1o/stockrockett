@@ -166,7 +166,7 @@ axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePe
             .attr("y", function (d, i) { return chartHeight + 50 - Math.max(0, yScale(d)); })
             .attr("height", function (d) { return Math.abs(yScale(d)); })
             .attr("width", barWidth)
-            .style("fill", "2F81BD")
+            .style("fill", "#2F81BD")
             .style("stroke", "black")
             .style("stroke-width", "1px")
             .style("opacity", function (d, i) { return 1 /*- (i * (1/data.length)); */ });
