@@ -12,7 +12,7 @@ const iex = new IEXCloudClient(fetch, {
 
 
 //  export const getSqThirtyDayAvg = () => { 
-axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePercent,date&token=Tpk_7191aab3200940d588ebad397e1e7e0d')
+axios.get('https://sandbox.iexapis.com/stable/stock/aapl/chart/1m?&filter=changePercent,date&token=Tpk_7191aab3200940d588ebad397e1e7e0d')
     .then(function (response) {
 
 
