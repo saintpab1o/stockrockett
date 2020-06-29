@@ -33,9 +33,10 @@ nav { margin: 0; padding: 0;} body { margin: 0; padding: 0; }
 }
 
 .bar-chart{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+margin-left:auto; 
+margin-right:auto; 
+display:block;
+margin-top: 3%;
 }
 
 
@@ -74,9 +75,6 @@ cursor:pointer;
 
 
  .bar-chart {
-    background-color: #C7D9D9;
+    background-color: lightgray;
     }
     
-.bar {
-     fill: #115D8C;
-     }
