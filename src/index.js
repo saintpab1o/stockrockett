@@ -143,16 +143,7 @@ axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePe
                     .domain(0, data.length * barWidth)
                     .range(0, chartWidth);
 
-       
-
-    var xAxis = d3.axisBottom(xAxis);
-      svg.append('g')
-            .attr('transform', function (d) {
-                return 'translate(' + margin.left + ', 0)';
-            })
-            .call(yAxis);
-
-
+    var xAxis = d3.axisBottom();
     
 
         // var svgWidth = 500, svgHeight = 350, barPadding = 10;
