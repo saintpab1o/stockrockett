@@ -119,11 +119,11 @@ axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePe
 
     
         // console.log(sqArray)
-        // console.log(mondayMonthlyPercent, 'sq monday')
-        // console.log(tuesdayMonthlyPercent, 'sq tuesday') 
-        // console.log(wednesdayMonthlyPercent, 'sq wednesday') 
-        // console.log(thursdayMonthlyPercent, 'sq thursday') 
-        // console.log(fridayMonthlyPercent, 'sq friday')  
+        console.log(mondayMonthlyPercent, 'sq monday')
+        console.log(tuesdayMonthlyPercent, 'sq tuesday') 
+        console.log(wednesdayMonthlyPercent, 'sq wednesday') 
+        console.log(thursdayMonthlyPercent, 'sq thursday') 
+        console.log(fridayMonthlyPercent, 'sq friday')  
 
          var data = [mondayMonthlyPercent, tuesdayMonthlyPercent, wednesdayMonthlyPercent, thursdayMonthlyPercent, fridayMonthlyPercent]
         // let sqArray = [50, 20, 5, 30, 10]
@@ -134,7 +134,7 @@ axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePe
         var leftMargin = 50;  // Space to the left of first bar; accomodates y-axis labels
         var rightMargin = 0; // Space to the right of last bar
         var margin = { left: leftMargin, right: rightMargin, top: 10, bottom: 10 };
-        var barWidth = 50;  // Width of the bars
+        var barWidth = 80;  // Width of the bars
         var chartHeight = 450;  // Height of chart, from x-axis (ie. y=0)
         var chartWidth = margin.left + data.length * barWidth + margin.right;
 
@@ -188,9 +188,6 @@ axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePe
     
     
   })
-       
-
-
 
 // }
 
