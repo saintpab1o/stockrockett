@@ -11,7 +11,7 @@ const iex = new IEXCloudClient(fetch, {
 });
 
 
-//    export const getSqThirtyDayAvg = () => { 
+
 axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePercent,date&token=Tpk_7191aab3200940d588ebad397e1e7e0d')
     .then(function (response) {
 
@@ -151,6 +151,8 @@ axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePe
             .domain([d3.min(data), d3.max(data)])
             .range([chartHeight - yScale(d3.min(data)), 0]);
 
+            
+
         var svg = d3.select('svg');
         svg
             .attr('height', chartHeight + 100)
@@ -163,13 +165,13 @@ axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePe
             .enter()
             .append("rect")
             .attr("x", function (d, i) { return margin.left + i * barWidth; })
-            .attr("y", function (d, i) { return chartHeight + 50 - Math.max(0, yScale(d)); })
+            .attr("y", function (d, i) { return chartHeight - Math.max(0, yScale(d)); })
             .attr("height", function (d) { return Math.abs(yScale(d)); })
             .attr("width", barWidth)
             .style("fill", "#2F81BD")
             .style("stroke", "black")
             .style("stroke-width", "1px")
-            .style("opacity", function (d, i) { return 1 /*- (i * (1/data.length)); */ });
+            .style("opacity", function (d, i) { return 1 - (i * (1/data.length));  });
 
         var yAxis = d3.axisLeft(yAxisScale);
 
@@ -179,15 +181,19 @@ axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePe
             })
             .call(yAxis);
 
-    
-    var xScale = d3.scaleLinear()
-                    .domain(0, data.length * barWidth)
-                    .range(0, chartWidth);
+            
 
-    var xAxis = d3.axisBottom();
+
+
     
+
     
   })
+
+
+       
+
+
 
 // }
 
