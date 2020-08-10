@@ -12,7 +12,7 @@ const iex = new IEXCloudClient(fetch, {
 
 
 
-axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePercent,date&token=Tpk_7191aab3200940d588ebad397e1e7e0d')
+axios.get('https://sandbox.iexapis.com/stable/stock/FB/chart/3m?&filter=changePercent,date&token=Tpk_7191aab3200940d588ebad397e1e7e0d')
     .then(function (response) {
 
 
@@ -111,9 +111,9 @@ axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePe
     let fridayMonthlyPercent = 0
    
 
-    let sqData = response.data
+    let stockData = response.data
       
-    sqData.forEach(el => {
+    stockData.forEach(el => {
         let dailyChange = el.changePercent
         let quoteDate = el.date
           
@@ -147,11 +147,11 @@ axios.get('https://sandbox.iexapis.com/stable/stock/SQ/chart/1m?&filter=changePe
 
     
         // console.log(sqArray)
-        console.log(mondayMonthlyPercent, 'sq monday')
-        console.log(tuesdayMonthlyPercent, 'sq tuesday') 
-        console.log(wednesdayMonthlyPercent, 'sq wednesday') 
-        console.log(thursdayMonthlyPercent, 'sq thursday') 
-        console.log(fridayMonthlyPercent, 'sq friday')  
+        // console.log(mondayMonthlyPercent, 'sq monday')
+        // console.log(tuesdayMonthlyPercent, 'sq tuesday') 
+        // console.log(wednesdayMonthlyPercent, 'sq wednesday') 
+        // console.log(thursdayMonthlyPercent, 'sq thursday') 
+        // console.log(fridayMonthlyPercent, 'sq friday')  
 
          var data = [mondayMonthlyPercent, tuesdayMonthlyPercent, wednesdayMonthlyPercent, thursdayMonthlyPercent, fridayMonthlyPercent]
         // let sqArray = [50, 20, 5, 30, 10]
