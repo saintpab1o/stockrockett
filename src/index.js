@@ -12,7 +12,7 @@ const iex = new IEXCloudClient(fetch, {
 
 
 
-axios.get('https://sandbox.iexapis.com/stable/stock/FB/chart/3m?&filter=changePercent,date&token=Tpk_7191aab3200940d588ebad397e1e7e0d')
+axios.get('https://sandbox.iexapis.com/stable/stock/FB/chart/1m?&filter=changePercent,date&token=Tpk_7191aab3200940d588ebad397e1e7e0d')
     .then(function (response) {
 
 
