@@ -197,9 +197,9 @@ axios.get('https://sandbox.iexapis.com/stable/stock/FB/chart/3m?&filter=changePe
             .attr("height", function (d) { return Math.abs(yScale(d)); })
             .attr("width", barWidth)
             .style("fill", "#110552")
-            .style("stroke", "black")
+            .style("stroke", "white")
             .style("stroke-width", "1px")
-            .style("opacity", function (d, i) { return 1 /*- (i * (1/data.length)); */ });
+            .style("opacity", function (data, i) { return 1 /*- (i * (1/data.length)); */ });
 
         var yAxis = d3.axisLeft(yAxisScale);
 
