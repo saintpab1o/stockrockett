@@ -196,10 +196,10 @@ axios.get('https://sandbox.iexapis.com/stable/stock/FB/chart/3m?&filter=changePe
             .attr("y", function (d, i) { return chartHeight - Math.max(0, yScale(d)); })
             .attr("height", function (d) { return Math.abs(yScale(d)); })
             .attr("width", barWidth)
-            .style("fill", "#2F81BD")
+            .style("fill", "#110552")
             .style("stroke", "black")
             .style("stroke-width", "1px")
-            .style("opacity", function (d, i) { return 1 - (i * (1/data.length));  });
+            .style("opacity", function (d, i) { return 1 /*- (i * (1/data.length)); */ });
 
         var yAxis = d3.axisLeft(yAxisScale);
 

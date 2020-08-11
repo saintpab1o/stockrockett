@@ -7,7 +7,7 @@ nav { margin: 0; padding: 0;} body { margin: 0; padding: 0; }
     align-items: center;
     justify-content: space-between;
     color: #e2e2e2;
-    background-color: gray;
+    background-color: #110552;
     padding: 20px;
 }
 
@@ -33,48 +33,57 @@ nav { margin: 0; padding: 0;} body { margin: 0; padding: 0; }
 }
 
 .bar-chart{
-margin-left:auto; 
-margin-right:auto; 
-display:block;
-margin-top: 1%;
+margin-top: 5%;
+background-color: lightgray;
+} 
+
+
+#company-ticker{
+     background-color: #110552;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    width: 250px;
+    
 }
 
-
-/* 
-#stock-options{
-  
-  color:#eeeeee;
-  font-family: sans-serif;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  margin-left: 50px;
-  margin-top: 3px; 
-  align-items: center;
-  font-weight: bold;
-  
-}
-
-#stock-dropdown {
-  background-color: transparent;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 5px;
-  display:flex;
-  justify-content: center;
-  text-align: center;
-cursor:pointer;
-  
+#time-frame{
+  background-color: #110552;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    width: 250px;
 }
 
 
 
 
- */
 
 
- .bar-chart {
-    background-color: lightgray;
+#drop{
+  margin-top: 17%;
+}
+
+
+
+
+
+ #submit{
+   width: 250px;
+ }
+
+
+
+
+    #main-content{
+      display: flex;
+      flex-direction: row;
+    justify-content: space-evenly;
+     
+     
     }
     
