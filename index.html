@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
     <script type='module' src="index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <script src='https://d3js.org/d3.v4.min.js'></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     
@@ -19,6 +20,11 @@
 
     <div id="nav">
         <div id="nav-left">StockRocket</div>
+        <div class = "navlinks"></div>
+        <a href="https://www.linkedin.com/in/paulmagioncalda/"  class="navlink fab fa-linkedin"></a>
+        <a href="https://github.com/saintpab1o"  class="navlink fa-github"></a>
+        <a href="https://angel.co/u/paul-magioncalda"    class="navlink fab fa-angellist"></a>
+        
         <div id="nav-right">Advanced Entry Metrics</div>
     </div> 
 
@@ -47,9 +53,9 @@
                 
     </div>
 
-    <div className="timeframe-dropdown">
+    <div class="timeframe-dropdown">
     
-        <select className="time-frame" id="time-frame">
+        <select class="time-frame" id="time-frame">
             
     
             <option value="1m">1 month</option>
@@ -281,14 +287,7 @@
 
                         var xAxis = d3.axisBottom();
 
-                        // console.log(mondayMonthlyPercent, 'tsla monday')
-                        // console.log(tuesdayMonthlyPercent, 'tsla tuesday')
-                        // console.log(wednesdayMonthlyPercent, 'tsla wednesday')
-                        // console.log(thursdayMonthlyPercent, 'tsla thursday')
-                        // console.log(fridayMonthlyPercent, 'tsla friday')
-
-
-                    })
+             })
             }
         </script>
 
@@ -299,23 +298,7 @@
             </div>
 
     </div>
-
-
-
-        
-   
-      
-        
-       
-                
-
-    
-    
-   
-
-   
-
-   
+ 
 </body>
 
 </html>

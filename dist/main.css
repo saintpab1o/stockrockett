@@ -12,6 +12,21 @@ nav { margin: 0; padding: 0;} body { margin: 0; padding: 0; }
     padding: 20px;
 }
 
+
+
+.navlink{
+  color: #e2e2e2;
+ 
+  font-size: 18px;
+  margin-right: 15%;
+  
+}
+.navlink:hover{
+  color: white;
+  font-size: 18px;
+  
+}
+
 #nav-left {
     font-family: sans-serif;
     font-size: 26px;
@@ -80,11 +95,9 @@ background-color: lightgray;
 
 
 
-    #main-content{
-      display: flex;
-      flex-direction: row;
-    justify-content: space-evenly;
-     
-     
-    }
+#main-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
     
