@@ -147,7 +147,7 @@ axios.get('https://sandbox.iexapis.com/stable/stock/FB/chart/1m?&filter=changePe
 
     
         // console.log(sqArray)
-        // console.log(mondayMonthlyPercent, 'sq monday')
+        console.log(fridayMonthlyPercent, 'fb friday day')
         // console.log(tuesdayMonthlyPercent, 'sq tuesday') 
         // console.log(wednesdayMonthlyPercent, 'sq wednesday') 
         // console.log(thursdayMonthlyPercent, 'sq thursday') 
