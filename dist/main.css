@@ -218,7 +218,7 @@ background-color: lightgray;
   height: 100%;
   background-color: rgba(0,0,0, 0.7);
   position: absolute;
-  top: 0;
+  top: 0; 
 }
 
 .modal-content{
@@ -230,9 +230,35 @@ background-color: lightgray;
   padding: 20px;
 }
 
-.xaxis{
-  display: flex;
-  justify-content: flex-end;
-  font-family: sans-serif;
-  margin-right: 21%;
+.days{
+display: flex;
+align-self: row;
+margin-top: 5%;
+font-family: sans-serif;
+font-weight: bold;
+color: #110552;
+
+ 
+}
+
+.monday{
+  transform: rotate(-50deg); 
+  margin-left: 48%;
+}
+.tuesday{
+  transform: rotate(-50deg); 
+  margin-left: 1%;
+}
+.wednesday{
+  transform: rotate(-50deg); 
+  margin-left: 1%;
+   
+}
+.thursday{
+  transform: rotate(-50deg); 
+   margin-left: 1%;
+}
+.friday{
+transform: rotate(-50deg); 
+   margin-left: 2%;
 }

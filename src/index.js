@@ -201,7 +201,7 @@ axios.get('https://sandbox.iexapis.com/stable/stock/FB/chart/1m?&filter=changePe
             .selectAll("rect")
             .data(data)
             .enter()
-            .append("rect")  
+            .append("rect") 
             .transition()
             .duration(1500)
             .attr("height", d => d + 200)         
