@@ -27,8 +27,28 @@
         <a href="https://angel.co/u/paul-magioncalda"    class="navlink fab fa-angellist"></a>
         
         <div id="nav-right">Advanced Entry Metrics</div>
+
+      
     </div> 
 
+    <div class="bg-modal"> 
+        <div class="modal-content"> 
+            <div class="close"></div>
+            <img width = 20% src="./images/IMG_0547.ico">
+        </div>
+    </div>
+
+    <script> document.getElementById('nav-right').addEventListener('click',
+    function() {
+        document.querySelector('.bg-modal').style.display ='flex'
+    });
+
+
+
+    
+    </script>
+
+    
 
     <!-- <div class="custom-select-wrapper">
         <div class="custom-select">
@@ -323,16 +343,12 @@
                             .attr('transform', function (d) {
                                 return 'translate(' + margin.left + ', 0)';
                             })
-                            .call(yAxis)
-                            .transition()
-                            .style("color", "red");
+                            .call(yAxis);
 
 
                         var xScale = d3.scaleLinear()
                             .domain(0, data.length * barWidth)
                             .range(0, chartWidth)
-                             .transition()
-                            .style("color", "red");
 
                         var xAxis = d3.axisBottom();
 
