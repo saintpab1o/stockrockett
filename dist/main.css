@@ -218,8 +218,11 @@ background-color: lightgray;
   height: 100%;
   background-color: rgba(0,0,0, 0.7);
   position: absolute;
-  top: 0; 
+  top: 0px; 
+  
 }
+
+
 
 .modal-content{
   width: 500px; 
@@ -237,6 +240,7 @@ margin-top: 5%;
 font-family: sans-serif;
 font-weight: bold;
 color: #110552;
+
 
  
 }
