@@ -166,6 +166,14 @@ axios.get('https://sandbox.iexapis.com/stable/stock/FB/chart/1m?&filter=changePe
         // console.log(thursdayMonthlyPercent, 'sq thursday') 
         // console.log(fridayMonthlyPercent, 'sq friday')  
 
+
+
+
+
+       
+
+
+
          var data = [mondayMonthlyPercent, tuesdayMonthlyPercent, wednesdayMonthlyPercent, thursdayMonthlyPercent, fridayMonthlyPercent]
   
 
@@ -210,7 +218,7 @@ axios.get('https://sandbox.iexapis.com/stable/stock/FB/chart/1m?&filter=changePe
             .attr("height", function (d) { return Math.abs(yScale(d)); })
             .attr("width", barWidth)
             .style("fill", "#110552")            
-           .style("stroke", "white")
+            .style("stroke", "white")
             .style("stroke-width", "1px")
             .style("opacity", function (data, i) { return 1 /*- (i * (1/data.length)); */ })
        
@@ -221,19 +229,61 @@ axios.get('https://sandbox.iexapis.com/stable/stock/FB/chart/1m?&filter=changePe
             .attr('transform', function (d) {
                 return 'translate(' + margin.left + ', 0)';
             })
-            .call(yAxis);
-
-            
-
-            
-
-
-
-    
-
-    
+            .call(yAxis); 
   })
 
 
        
 
+
+
+  // code for negative values with diffrent colors
+
+        // var maxHeight = d3.max(dataset, function (d) { return d });
+        // var w = 500;
+        // var h = maxHeight * 10 * 2 + 100;
+        // var svg = d3.select("body").append("svg").attr("width", w).attr("height", h);
+
+        // var barpadding = 2;
+        // var bars = svg.selectAll("rect").data(dataset).enter().append("rect");
+        // bars.attr("x", function (d, i) {
+        //     return i * (w / dataset.length);
+        // })
+        //     .attr("y", function (d) {
+        //         if (d > 0) {
+        //             return h / 2 - 10 * d;
+        //         }
+        //         else {
+        //             return h / 2
+        //         }
+        //     })//for bottom to top
+        //     .attr("width", w / dataset.length - barpadding)
+        //     .attr("height", function (d) {
+        //         return Math.abs(100 * d);
+        //     });
+        // bars.attr("fill", function (d) {
+        //     if (d < 0) {
+        //         return "red";
+        //     }
+        //     else {
+        //         return "green";
+        //     }
+        //     //return "rgb(0,"+Math.abs(d*10)+",0)"
+        // });
+
+        // //add tag to every bar chart
+        // var tags = svg.selectAll("text").data(dataset).enter().append("text").text(function (d) {
+        //     return d;
+        // });
+        // tags.attr("x", function (d, i) {
+        //     return i * (w / dataset.length) + 13;
+        // })
+        //     .attr("y", function (d) {
+        //         if (d > 0) {
+        //             return h / 2 - 10 * d + 15;
+        //         }
+        //         else {
+        //             return h / 2 + 10 * Math.abs(d) - 5;
+        //         }
+        //     })//for bottom to top
+        //     .attr("fill", "white");

@@ -156,10 +156,7 @@ nav { margin: 0; padding: 0;} body { margin: 0; padding: 0; }
   color: white;
 }
 
-.bar-chart{
-margin-top: 5%;
-background-color: lightgray;
-} 
+
 
 
 #company-ticker{
@@ -233,36 +230,41 @@ background-color: lightgray;
   padding: 20px;
 }
 
-.days{
-display: flex;
-align-self: row;
+.bar-chart{
 margin-top: 5%;
+background-color: lightgray;
+} 
+
+.days{
+  display: flex;
 font-family: sans-serif;
 font-weight: bold;
 color: #110552;
-
-
- 
+margin-top: 9%;
+margin-left: 12%;
 }
 
+
+
 .monday{
+  
   transform: rotate(-50deg); 
-  margin-left: 48%;
+  /* margin-left: 48%; */
 }
 .tuesday{
   transform: rotate(-50deg); 
-  margin-left: 1%;
+  margin-left: 3%;
 }
 .wednesday{
   transform: rotate(-50deg); 
-  margin-left: 1%;
+  margin-left: 3%;
    
 }
 .thursday{
   transform: rotate(-50deg); 
-   margin-left: 1%;
+   margin-left: 3%;
 }
 .friday{
 transform: rotate(-50deg); 
-   margin-left: 2%;
+   margin-left: 3%;
 }
