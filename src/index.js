@@ -167,10 +167,7 @@ axios.get('https://sandbox.iexapis.com/stable/stock/FB/chart/1m?&filter=changePe
         // console.log(fridayMonthlyPercent, 'sq friday')  
 
          var data = [mondayMonthlyPercent, tuesdayMonthlyPercent, wednesdayMonthlyPercent, thursdayMonthlyPercent, fridayMonthlyPercent]
-        // let sqArray = [50, 20, 5, 30, 10]
-
-
-        // var data = [100, -100, -150, 55, 150, 120, 450, 980, 1200];
+  
 
         var leftMargin = 50;  // Space to the left of first bar; accomodates y-axis labels
         var rightMargin = 0; // Space to the right of last bar
@@ -204,15 +201,19 @@ axios.get('https://sandbox.iexapis.com/stable/stock/FB/chart/1m?&filter=changePe
             .selectAll("rect")
             .data(data)
             .enter()
-            .append("rect")
+            .append("rect")  
+            .transition()
+            .duration(1500)
+            .attr("height", d => d + 200)         
             .attr("x", function (d, i) { return margin.left + i * barWidth; })
             .attr("y", function (d, i) { return chartHeight - Math.max(0, yScale(d)); })
             .attr("height", function (d) { return Math.abs(yScale(d)); })
             .attr("width", barWidth)
-            .style("fill", "#110552")
-            .style("stroke", "white")
+            .style("fill", "#110552")            
+           .style("stroke", "white")
             .style("stroke-width", "1px")
-            .style("opacity", function (data, i) { return 1 /*- (i * (1/data.length)); */ });
+            .style("opacity", function (data, i) { return 1 /*- (i * (1/data.length)); */ })
+       
 
         var yAxis = d3.axisLeft(yAxisScale);
 
