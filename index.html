@@ -42,12 +42,20 @@
     function() {
         document.querySelector('.bg-modal').style.display ='flex'
     });
-
-
-
     
     </script>
 
+<script>
+    // Get the modal
+    var modal = document.querySelector('.bg-modal');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
     
 
     <!-- <div class="custom-select-wrapper">
