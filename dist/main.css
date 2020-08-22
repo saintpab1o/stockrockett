@@ -229,3 +229,10 @@ background-color: lightgray;
   text-align: center;
   padding: 20px;
 }
+
+.xaxis{
+  display: flex;
+  justify-content: flex-end;
+  font-family: sans-serif;
+  margin-right: 21%;
+}
