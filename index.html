@@ -59,8 +59,8 @@
     }
 </script>
     
-
-    <!-- <div class="custom-select-wrapper">
+<!-- 
+    <div class="custom-select-wrapper">
         <div  class="custom-select">
             <div class="custom-select__trigger"><span>FB</span>
                 <div class="arrow"></div>
@@ -71,34 +71,34 @@
                 <span  class="custom-option">AMZN</span>
             </div>
         </div>
-    </div> -->
+    </div>
 
-    <!-- <script>
+    <script>
 
         document.querySelector('.custom-select-wrapper').addEventListener('click', function () {
-                this.querySelector('.custom-select').classList.toggle('open');
-            })
+                this.querySelector('.custom-select').classList.toggle('open'); -->
+            // })
 
              
 
-            for (const option of document.querySelectorAll(".custom-option")) {
-                    option.addEventListener('click', function () {
-                        if (!this.classList.contains('selected')) {
-                            this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
-                            this.classList.add('selected');
-                            this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
+            // for (const option of document.querySelectorAll(".custom-option")) {
+            //         option.addEventListener('click', function () {
+            //             if (!this.classList.contains('selected')) {
+            //                 this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
+            //                 this.classList.add('selected');
+            //                 this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
                           
-                        }
-                    })
-                }
+            //             }
+            //         })
+            //     }
 
 
-    var sortBySelect = document.querySelector('.custom-option.selected');
-    sortBySelect.value = 'new value';
-    sortBySelect.dispatchEvent(new Event('change'))
+    // var sortBySelect = document.querySelector('.custom-option.selected');
+    // sortBySelect.value = 'new value';
+    // sortBySelect.dispatchEvent(new Event('change'))
 
-    document.querySelector('.custom-option.selected').addEventListener('change', () =>
-                    console.log("Changed!"))
+    // document.querySelector('.custom-option.selected').addEventListener('change', () =>
+    //                 console.log("Changed!"))
     
 
                     
@@ -107,14 +107,14 @@
                     
       
 
-                window.addEventListener('click', function (e) {
-                        const select = document.querySelector('.custom-select')
-                        if (!select.contains(e.target)) {
-                            select.classList.remove('open');
-                        }
-                    });
+    //             window.addEventListener('click', function (e) {
+    //                     const select = document.querySelector('.custom-select')
+    //                     if (!select.contains(e.target)) {
+    //                         select.classList.remove('open');
+    //                     }
+    //                 });
 
-    </script> -->
+    // </script>
 
 
 
@@ -165,9 +165,7 @@
 
             //  const selectElement = document.querySelector('.custom-option.selected');
 
-            //     selectElement.addEventListener('change', getStockAvgs()); 
-
-                
+            //      selectElement.addEventListener('change', getStockAvgs()); 
             
 
 
