@@ -108,7 +108,7 @@
 
     <div class="company-dropdown" id = "company-dropdown">
 
-        <select class="company-ticker" id="company-ticker">
+        <select onchange="getStockAvgs()" class="company-ticker" id="company-ticker">
             
                 
            
@@ -125,7 +125,7 @@
 
     <div class="timeframe-dropdown">
     
-        <select class="time-frame" id="time-frame">
+        <select onchange="getStockAvgs()" class="time-frame" id="time-frame">
             
     
             <option value="1m">1 month</option>
@@ -135,7 +135,10 @@
     
     </div>
 
-        <button  id = "submit" onclick="getStockAvgs()">Submit </button>
+        <!-- <button  id = "submit" onclick="getStockAvgs()">Submit </button> -->
+
+        
+
         </div>
 
         <script>
