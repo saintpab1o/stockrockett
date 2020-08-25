@@ -120,13 +120,23 @@ nav { margin: 0; padding: 0;} body { margin: 0; padding: 0; }
     padding: 20px;
 }
 
+#q::before {
+ font-family: "Font Awesome\ 5 Free";
+ display: inline-block;
+ padding-right: 3px;
+ font-weight: 900;
+ content: "\f05a";
+}
 
+#q{
+  font-family: sans-serif;
+}
 
 .navlink{
-  color: #e2e2e2;
- 
-  font-size: 18px;
-  margin-right: 15%;
+color: #e2e2e2;
+position: relative;
+font-size: 18px;
+margin-right: 10%;
   
 }
 .navlink:hover{
@@ -240,6 +250,7 @@ transform: rotate(-90deg);
   background-color: rgba(0,0,0, 0.7);
   position: absolute;
   top: 0px; 
+  z-index: 1;
   
 }
 
