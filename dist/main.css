@@ -255,12 +255,13 @@ position: relative;
 
 .modal-content{
   width: 500px; 
-  height: 350px;
+  height: 450px;
   background: white;
   border-radius: 4px;
   text-align: center;
   padding: 25px;
   font-family: sans-serif;
+  line-height: 1.5;
 }
 
 
