@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
     <meta name="image" property="og:image" content="images/ss.png">
 
     
@@ -14,33 +15,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <script src='https://d3js.org/d3.v4.min.js'></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    
-    
     <title>StockRocket</title>
 </head>
-
 <body>
     <script src="./dist/main.js"></script>
-
     <div id="nav">
         <div id="nav-left">StockRocket</div>
         <div class = "navlinks"></div>
         <a href="https://www.linkedin.com/in/paulmagioncalda/"  class="navlink fab fa-linkedin"></a>
         <a href="https://github.com/saintpab1o"  class="navlink fab fa-github"></a>
         <a href="https://angel.co/u/paul-magioncalda"    class="navlink fab fa-angellist"></a>
-           
-         
-        
         <div 
         class="navlink fa fa-info-circle" aria-hidden="true"
         id="nav-right">Advanced Entry Metrics</div>
         </div> 
-
     <div class="bg-modal"> 
         <div class="modal-content"> 
-            <img width = 20% src="./images/IMG_0547.ico"> 
-            
-            
+            <img width = 20% src="./images/IMG_0547.ico">  
             <h2>Welcome to StockRocket!</h2> 
                 <p>The algorithm behind StockRocket was developed
                 to help financial analysts and everyday traders
@@ -54,10 +45,7 @@
                 with Fridays being down on average as well lets investors idenfity
                 an opportunity for a perfect swing trade at Fridays close into the new week,
                 or a great jump on a new long term position. Enjoy!
-
                 </p2>
-                
-            
             <div class="close"></div>
         </div>
     </div>
@@ -66,9 +54,7 @@
     function() {
         document.querySelector('.bg-modal').style.display ='flex'
     });
-    
     </script>
-
 <script>
     // Get the modal
     var modal = document.querySelector('.bg-modal');
@@ -146,65 +132,36 @@
 
 
     <div id = "main-content">
-
         <div id="drop">
-
             <div class="drop-text">Select a Company and Ticker</div>
             <br>
-
         <div class="company-dropdown" id = "company-dropdown">
-
-       
-
         <select onchange="getStockAvgs()" class="company-ticker" id="company-ticker">
-            
-                
-           
-                    
+                  
                     <option value="FB"> Facebook - FB</option>
                     <option value="AMZN"> Amazon - AMZN</option>
                     <option value="AAPL"> Apple - AAPL</option>
                     <option value="NFLX"> Netflix - NFLX</option>
                     <option value="GOOG"> Google - GOOG</option>
                     <option value="TSLA"> Tesla - TSLA</option>
-                    <option value="MFST"> Microsoft - MSFT</option></select>
-                
+                    <option value="MFST"> Microsoft - MSFT</option></select>           
     </div>
     <br>
-
     <div class="timeframe-dropdown">
-    
         <select onchange="getStockAvgs()" class="time-frame" id="time-frame">
-            
-    
             <option value="1m">1 month</option>
             <option value="3m">3 months</option>
             <option value="6m">6 months</option>
         </select>
-
-        
-    
     </div>
-
-    
-
         <!-- <button  id = "submit" onclick="getStockAvgs()">Submit </button> -->
-
-        
-
         </div>
-        
-
         <script>
             function getStockAvgs() {
-
-
             //  const selectElement = document.querySelector('.custom-option.selected');
 
             //      selectElement.addEventListener('change', getStockAvgs()); 
-            
-
-                    // Use this for select menu
+                                // Use this for select menu
                 let selectCompanyTicker = document.getElementById('company-ticker'),
                 companyValue = selectCompanyTicker.value
 
@@ -219,9 +176,8 @@
                 svg.selectAll("*").remove();
 
                 axios.get(`https://sandbox.iexapis.com/stable/stock/${companyValue}/chart/${timeFrameValue}?&filter=changePercent,date&token=Tpk_7191aab3200940d588ebad397e1e7e0d`)
-              
-                   .then(function (response) {
 
+                   .then(function (response) {
 
                                 const monday = [
                                     "2020-01-06", "2020-01-13", "2020-01-20", "2020-01-27",
@@ -317,7 +273,6 @@
                                 let thursdayMonthlyPercent = 0
                                 let fridayMonthlyPercent = 0
 
-
                                 let stockData = response.data
 
                                 stockData.forEach(el => {
@@ -351,36 +306,13 @@
                                         fridayMonthlyPercent = (fridayChange / fridayCount)
                                     }
                                 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                 // console.log(sqArray)
                                 // console.log(fridayMonthlyPercent, 'fb friday day')
                                 // console.log(tuesdayMonthlyPercent, 'sq tuesday') 
                                 // console.log(wednesdayMonthlyPercent, 'sq wednesday') 
                                 // console.log(thursdayMonthlyPercent, 'sq thursday') 
                                 // console.log(fridayMonthlyPercent, 'sq friday')  
-
-
-
-
-
-
-
-
-
+                                
                                 var data = [mondayMonthlyPercent, tuesdayMonthlyPercent, wednesdayMonthlyPercent, thursdayMonthlyPercent, fridayMonthlyPercent]
 
 
