@@ -178,6 +178,7 @@
                 axios.get(`https://sandbox.iexapis.com/stable/stock/${companyValue}/chart/${timeFrameValue}?&filter=changePercent,date&token=Tpk_7191aab3200940d588ebad397e1e7e0d`)
 
                    .then(function (response) {
+                       console.log(response)
 
                                 const monday = [
                                     "2020-01-06", "2020-01-13", "2020-01-20", "2020-01-27",
