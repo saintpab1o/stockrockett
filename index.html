@@ -173,9 +173,11 @@
                     timeFrameValue = selectTimeFrame.value;
 
                 var svg = d3.select("svg");
-                svg.selectAll("*").remove();
+                svg.selectAll("*").remove(); 
 
-                axios.get(`https://sandbox.iexapis.com/stable/stock/${companyValue}/chart/${timeFrameValue}?&filter=changePercent,date&token=Tpk_7191aab3200940d588ebad397e1e7e0d`)
+                //axios.get(`https://sandbox.iexapis.com/stable/stock/${companyValue}/chart/?&filter=changePercent,date&token=Tpk_7191aab3200940d588ebad397e1e7e0d`)
+                axios.get(`https://sandbox.iexapis.com/stable/stock/${companyValue}/chart/${timeFrameValue}?token=Tsk_4fc15c0c3dab49d284a00d5c440fc609`)
+                
 
                    .then(function (response) {
                        console.log(response)
@@ -277,7 +279,7 @@
                                 let stockData = response.data
 
                                 stockData.forEach(el => {
-                                    let dailyChange = el.changePercent
+                                    let dailyChange = el.change
                                     let quoteDate = el.date
 
                                     if (monday.includes(el.date)) {

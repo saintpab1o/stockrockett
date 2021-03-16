@@ -12,9 +12,9 @@ const iex = new IEXCloudClient(fetch, {
 
 
 
-axios.get('https://sandbox.iexapis.com/stable/stock/FB/chart/1m?&filter=open,close,date&token=Tpk_7191aab3200940d588ebad397e1e7e0d')
+axios.get('https://sandbox.iexapis.com/stable/stock/aapl/chart/1m?token=Tsk_4fc15c0c3dab49d284a00d5c440fc609')
     .then(function (response) {
-        console.log(response.data)
+        
 
 
         const monday = [
