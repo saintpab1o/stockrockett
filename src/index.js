@@ -111,7 +111,6 @@ axios.get('https://sandbox.iexapis.com/stable/stock/aapl/chart/1m?token=Tsk_4fc1
     let thursdayMonthlyPercent = 0
     let fridayMonthlyPercent = 0
    
-
     let stockData = response.data
       
     stockData.forEach(el => {
@@ -146,20 +145,6 @@ axios.get('https://sandbox.iexapis.com/stable/stock/aapl/chart/1m?token=Tsk_4fc1
         }
     })
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    
         // console.log(sqArray)
         console.log(fridayMonthlyPercent, 'fb friday day')
         // console.log(tuesdayMonthlyPercent, 'sq tuesday') 
@@ -168,14 +153,8 @@ axios.get('https://sandbox.iexapis.com/stable/stock/aapl/chart/1m?token=Tsk_4fc1
         // console.log(fridayMonthlyPercent, 'sq friday')  
 
 
-
-
-
-       
-
-
-
-         var data = [mondayMonthlyPercent, tuesdayMonthlyPercent, wednesdayMonthlyPercent, thursdayMonthlyPercent, fridayMonthlyPercent]
+        //D3
+        var data = [mondayMonthlyPercent, tuesdayMonthlyPercent, wednesdayMonthlyPercent, thursdayMonthlyPercent, fridayMonthlyPercent]
   
 
         var leftMargin = 50;  // Space to the left of first bar; accomodates y-axis labels
@@ -198,8 +177,7 @@ axios.get('https://sandbox.iexapis.com/stable/stock/aapl/chart/1m?token=Tsk_4fc1
             .domain([d3.min(data), d3.max(data)])
             .range([chartHeight - yScale(d3.min(data)), 0]);
 
-            
-
+        
         var svg = d3.select('svg');
         svg
             .attr('height', chartHeight + 100)
@@ -232,10 +210,6 @@ axios.get('https://sandbox.iexapis.com/stable/stock/aapl/chart/1m?token=Tsk_4fc1
             })
             .call(yAxis); 
   })
-
-
-       
-
 
 
   // code for negative values with diffrent colors
