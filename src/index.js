@@ -3,19 +3,14 @@ import axios from 'axios'
 
  import * as d3 from 'd3'
 
-
 const iex = new IEXCloudClient(fetch, {
     sandbox: true,
     publishable: "Tpk_7191aab3200940d588ebad397e1e7e0d",
     version: "stable"
 });
 
-
-
 axios.get('https://sandbox.iexapis.com/stable/stock/aapl/chart/1m?token=Tsk_4fc15c0c3dab49d284a00d5c440fc609')
     .then(function (response) {
-        
-
 
         const monday = [
             "2021-01-06", "2021-01-13", "2021-01-20", "2021-01-27",
@@ -91,7 +86,6 @@ axios.get('https://sandbox.iexapis.com/stable/stock/aapl/chart/1m?token=Tsk_4fc1
             "2021-11-06", "2021-11-13", "2021-11-20", "2021-11-27",
             "2021-12-04", "2021-12-11", "2021-12-18", "2021-12-25",
         ]
-
 
     let mondayChange = 0
     let tuesdayChange = 0
