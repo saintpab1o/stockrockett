@@ -131,11 +131,11 @@ axios.get('https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c
         let dailyChange = dailyDivision * 100
 
         
-        console.log(stockClose + ' stock close')
-        console.log(dailyDifference + ' diff')
-        console.log(dailyDivision + ' divison')
-        console.log(dailyChange + ' daily change')
-        console.log('date: ' + quoteDate)
+        // console.log(stockClose + ' stock close')
+        // console.log(dailyDifference + ' diff')
+        // console.log(dailyDivision + ' divison')
+        // console.log(dailyChange + ' daily change')
+        // console.log('date: ' + quoteDate)
 
           
         if(monday.includes(el.date)){
@@ -144,7 +144,7 @@ axios.get('https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c
             mondayMonthlyPercent = (mondayChange / mondayCount) 
             
             
-        } if(tuesday.includes(el.date)){
+        } if (tuesday.includes(el.date)){
             tuesdayCount += 1
             tuesdayChange += dailyChange
             tuesdayMonthlyPercent = (tuesdayChange / tuesdayCount)  
