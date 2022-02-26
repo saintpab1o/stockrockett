@@ -362,9 +362,10 @@
                                     let stockOpen = el.open
                                     let stockClose = el.close
                                     let dailyDifference = (stockClose - stockOpen)
-                                    let dailyDivision = dailyDifference / stockOpen
+                                    let dailyDivision = (dailyDifference / stockOpen)
                                     let dailyChange = dailyDivision * 100
 
+                                   
                                
 
                                     if (monday.includes(el.date)) {
@@ -395,11 +396,12 @@
                                     }
                                 })
                                 
-                                // console.log(fridayMonthlyPercent, 'monday')
-                                // console.log(tuesdayMonthlyPercent, 'tuesday') 
-                                // console.log(wednesdayMonthlyPercent, 'wednesday') 
-                                // console.log(thursdayMonthlyPercent, 'thursday') 
-                                // console.log(fridayMonthlyPercent, 'friday')  
+                    //     console.log(stockOpen + ' stock open')
+                    //    console.log(stockClose + ' stock close')
+                    //    console.log(dailyDifference + 'diff')
+                    //    console.log(dailyDivision + 'div')
+                    //    console.log(dailyChange + ' daily change')
+                    //    console.log('date: ' + quoteDate)
 
                                 var data = [mondayMonthlyPercent, tuesdayMonthlyPercent, wednesdayMonthlyPercent, thursdayMonthlyPercent, fridayMonthlyPercent]
 

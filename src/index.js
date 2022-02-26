@@ -127,13 +127,13 @@ axios.get('https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c
         let stockOpen = el.open
         let stockClose = el.close
         let dailyDifference = (stockClose - stockOpen)
-        let dailyDivision = dailyDifference / stockOpen
+        let dailyDivision = (dailyDifference / stockOpen)
         let dailyChange = dailyDivision * 100
 
-        console.log(stockOpen + ' stock open')
+        
         console.log(stockClose + ' stock close')
-        console.log(dailyDifference)
-        console.log(dailyDivision)
+        console.log(dailyDifference + ' diff')
+        console.log(dailyDivision + ' divison')
         console.log(dailyChange + ' daily change')
         console.log('date: ' + quoteDate)
 
