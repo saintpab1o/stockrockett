@@ -172,7 +172,7 @@ axios.get('https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c
 
         //D3
         var data = [mondayMonthlyPercent, tuesdayMonthlyPercent, wednesdayMonthlyPercent, thursdayMonthlyPercent, fridayMonthlyPercent]
-  
+
 
         var leftMargin = 50;  // Space to the left of first bar; accomodates y-axis labels
         var rightMargin = 0; // Space to the right of last bar
@@ -194,7 +194,8 @@ axios.get('https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c
             .domain([d3.min(data), d3.max(data)])
             .range([chartHeight - yScale(d3.min(data)), 0]);
 
-        
+
+
         var svg = d3.select('svg');
         svg
             .attr('height', chartHeight + 100)
@@ -205,19 +206,19 @@ axios.get('https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c
             .selectAll("rect")
             .data(data)
             .enter()
-            .append("rect") 
+            .append("rect")
             .transition()
             .duration(1500)
-            .attr("height", d => d + 200)         
+            .attr("height", d => d + 200)
             .attr("x", function (d, i) { return margin.left + i * barWidth; })
             .attr("y", function (d, i) { return chartHeight - Math.max(0, yScale(d)); })
             .attr("height", function (d) { return Math.abs(yScale(d)); })
             .attr("width", barWidth)
-            .style("fill", "#110552")            
+            .style("fill", "#110552")
             .style("stroke", "white")
             .style("stroke-width", "1px")
             .style("opacity", function (data, i) { return 1 /*- (i * (1/data.length)); */ })
-       
+
 
         var yAxis = d3.axisLeft(yAxisScale);
 
@@ -225,8 +226,8 @@ axios.get('https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c
             .attr('transform', function (d) {
                 return 'translate(' + margin.left + ', 0)';
             })
-            .call(yAxis); 
-  })
+            .call(yAxis);
+    })
 
 
   // code for negative values with diffrent colors
