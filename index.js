@@ -233,7 +233,7 @@ axios.get('https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c
                 return 'translate(' + margin.left + ', 0)';
             })
             .call(yAxis);
-            
+
     })
 
 
