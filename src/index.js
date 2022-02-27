@@ -6,6 +6,7 @@ import * as d3 from 'd3'
  //WHEN PAGE LOADS
 
 console.log('hello')
+
     const iex = new IEXCloudClient(fetch, {
       sandbox: true,
       publishable: "Tpk_7191aab3200940d588ebad397e1e7e0d",
@@ -13,13 +14,14 @@ console.log('hello')
     });
    
 
-                var svg = d3.select("svg");
+                  var svg = d3.select("svg");
+                  svg.selectAll("*").remove(); 
                
                 axios.get(`https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c0c3dab49d284a00d5c440fc609`)
                 
 
                    .then(function (response) {
-                    //    console.log(response)
+                  
 
                                 const monday = [
                                     "2022-01-03", "2022-01-10", "2022-01-17", "2022-01-24",
