@@ -7,6 +7,8 @@ import * as d3 from 'd3'
 
 console.log('hello')
 
+ function getStockAvgs() {
+
     const iex = new IEXCloudClient(fetch, {
       sandbox: true,
       publishable: "Tpk_7191aab3200940d588ebad397e1e7e0d",
@@ -233,6 +235,9 @@ console.log('hello')
                                     })
                                     .call(yAxis);
                             })
+                           
+                        }
+                         getStockAvgs();
 
                            
 
