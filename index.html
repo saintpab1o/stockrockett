@@ -170,7 +170,7 @@
                 
 
                    .then(function (response) {
-                       console.log(response)
+                    //    console.log(response)
 
                                 const monday = [
                                     "2022-01-03", "2022-01-10", "2022-01-17", "2022-01-24",
@@ -357,7 +357,7 @@
                                 let stockData = response.data
 
                                 stockData.forEach(el => {
-                                   
+                                    console.log(el)
 
                                     let quoteDate = el.date
                                     let stockOpen = el.open
