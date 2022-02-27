@@ -4,7 +4,7 @@ import * as d3 from 'd3'
 
 
  //WHEN PAGE LOADS
-console.log('hello')
+
 const iex = new IEXCloudClient(fetch, {
     sandbox: true,
     publishable: "Tpk_7191aab3200940d588ebad397e1e7e0d",
