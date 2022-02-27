@@ -4,7 +4,7 @@ import * as d3 from 'd3'
 
 
  //WHEN PAGE LOADS
-
+ function getStockAvgs() {
 const iex = new IEXCloudClient(fetch, {
     sandbox: true,
     publishable: "Tpk_7191aab3200940d588ebad397e1e7e0d",
@@ -235,7 +235,9 @@ axios.get('https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c
             .call(yAxis);
 
     })
-
+    
+}
+getStockAvgs();
 
 
   // code for negative values with diffrent colors
@@ -288,3 +290,6 @@ axios.get('https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c
         //         }
         //     })//for bottom to top
         //     .attr("fill", "white");
+
+
+export default  getStockAvgs()
