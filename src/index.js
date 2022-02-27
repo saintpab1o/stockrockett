@@ -17,6 +17,7 @@ svg.selectAll("*").remove();
 
 axios.get('https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c0c3dab49d284a00d5c440fc609')
     .then(function (response) {
+        console.log(response)
 
         const monday = [
             "2022-01-03", "2022-01-10", "2022-01-17", "2022-01-24",
@@ -123,6 +124,7 @@ axios.get('https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c
     let stockData = response.data
       
     stockData.forEach(el => {
+        
         
         let quoteDate = el.date
 
@@ -231,7 +233,9 @@ axios.get('https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c
                 return 'translate(' + margin.left + ', 0)';
             })
             .call(yAxis);
+            
     })
+
 
 
   // code for negative values with diffrent colors
