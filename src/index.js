@@ -1,10 +1,11 @@
 import { IEXCloudClient } from "node-iex-cloud";
 import axios from 'axios'
 
+
  import * as d3 from 'd3'
 
  //WHEN PAGE LOADS
-
+console.log('this page')
 
 const iex = new IEXCloudClient(fetch, {
     sandbox: true,
