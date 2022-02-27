@@ -44,7 +44,7 @@ nav { margin: 0; padding: 0;} body { margin: 0; padding: 0; }
      background: #fff;
      transition: all 0.5s;
      opacity: 0;
-     visibility: hidden;
+     /* visibility: hidden; */
      pointer-events: none;
      z-index: 2;
 }

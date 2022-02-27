@@ -5,13 +5,14 @@ import axios from 'axios'
 
  //WHEN PAGE LOADS
 
+
 const iex = new IEXCloudClient(fetch, {
     sandbox: true,
     publishable: "Tpk_7191aab3200940d588ebad397e1e7e0d",
     version: "stable"
 });
 
-axios.get('https://sandbox.iexapis.com/stable/stock/sq/chart/1m?token=Tsk_4fc15c0c3dab49d284a00d5c440fc609')
+axios.get('https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c0c3dab49d284a00d5c440fc609')
     .then(function (response) {
 
         const monday = [
