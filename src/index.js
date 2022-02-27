@@ -5,7 +5,7 @@ import * as d3 from 'd3'
 
  //WHEN PAGE LOADS
 
-
+console.log('hello')
     const iex = new IEXCloudClient(fetch, {
       sandbox: true,
       publishable: "Tpk_7191aab3200940d588ebad397e1e7e0d",
@@ -15,8 +15,6 @@ import * as d3 from 'd3'
 
                 var svg = d3.select("svg");
                
-
-                //axios.get(`https://sandbox.iexapis.com/stable/stock/${companyValue}/chart/?&filter=changePercent,date&token=Tpk_7191aab3200940d588ebad397e1e7e0d`)
                 axios.get(`https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c0c3dab49d284a00d5c440fc609`)
                 
 
@@ -120,8 +118,8 @@ import * as d3 from 'd3'
                                 let thursdayCount = 0
                                 let fridayCount = 0
 
-                                let mondayMonthlyPercent = 0
-                                let tuesdayMonthlyPercent = 0
+                                let mondayMonthlyPercent = 10
+                                let tuesdayMonthlyPercent = 10
                                 let wednesdayMonthlyPercent = 0
                                 let thursdayMonthlyPercent = 0
                                 let fridayMonthlyPercent = 0
