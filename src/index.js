@@ -2,14 +2,21 @@ import { IEXCloudClient } from "node-iex-cloud";
 import axios from 'axios'
 import * as d3 from 'd3'
 
+
  //WHEN PAGE LOADS
-console.log('this page')
+console.log('hello')
+
+
+
+
 
 const iex = new IEXCloudClient(fetch, {
     sandbox: true,
     publishable: "Tpk_7191aab3200940d588ebad397e1e7e0d",
     version: "stable"
 });
+
+
 
 var svg = d3.select("svg");
 
