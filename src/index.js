@@ -1,3 +1,5 @@
+console.log('yo')
+
 axios.get(`https://sandbox.iexapis.com/stable/stock/fb/chart/1m?token=Tsk_4fc15c0c3dab49d284a00d5c440fc609`)
                 
 
